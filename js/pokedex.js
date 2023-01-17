@@ -27,9 +27,13 @@ const printPokemons = (pokemons) => {
             carta$$.setAttribute("id",pokemon.id);
         const img$$ = document.createElement("img"); //creamos elemento imagen
         const h3$$ = document.createElement("h3"); //creamos elemento h3
+            h3$$.setAttribute("class","namePokemon");
+        // const id$$ = document.createElement("id");
+        //     id$$.setAttribute("class","id");
 
         h3$$.textContent = pokemon.name; //le decimos que h3$$ equivale a pokemon.name = nombre de cada pokemon
         img$$.src = pokemon.image; //le decimos que img$$ equivale a pokemon.image = imagen de cada pokemon
+        
         
         
         
@@ -37,9 +41,11 @@ const printPokemons = (pokemons) => {
         carta$$.appendChild(img$$); //introducimos img$$ dentro de nuestra carta$$
 
         for (const type of pokemon.type) { //recorremos el array de tipo, en el que encontramos el tipo de pokemon
-            const p$$ = document.createElement("p"); //creamos elemento p
-            p$$.textContent = type; //le decimos que p$$ equivale a tipo
-            carta$$.appendChild(p$$); //introducimos p$$ dentro de nuestra carta$$
+            const type$$ = document.createElement("div"); //creamos elemento p
+                type$$.setAttribute("class", type);
+                // type$$.setAttribute("type",type);
+            type$$.textContent = type; //le decimos que p$$ equivale a tipo
+            carta$$.appendChild(type$$); //introducimos p$$ dentro de nuestra carta$$
         }
 
         pokedex.appendChild(carta$$); //introducimos carta$$(div) dentro de nuestro pokedex = ol
