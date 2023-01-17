@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: rubik;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .logoPokemon{
+    height: 190px;
+  }
+
+  .contenedorNintendo {
+    height: 770px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .nintendo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgNintendo{
+    width: 1500px;
+    height: 700px;
+    position: absolute;
+    z-index: 1;
+
+  }
+
+  .pantallaNintendo{
+    background-color: black;
+    width: 1000px;
+    height: 590px;
+    position: absolute;
+    z-index: 2;
+    overflow: scroll;
+  }
+ 
+  #pokedex { /*Alineamos los pokemons*/
+    /* border-color: rgb(43, 42, 42); */
+    padding-inline-start: 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* width: 120px; */
+  }
+  
+  .card {
+    list-style: none;
+    padding: 50px;
+    margin: 5px;
+    background-color: #f4f4f4;
+    color: #222;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+  }
